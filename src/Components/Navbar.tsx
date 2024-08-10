@@ -1,25 +1,31 @@
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
             <div className="container"> {/* Logo */}
                 <Link className="navbar-brand" to="/">
-                    <img src="" alt="Bootstrap" width="30" height="24" />
+                    <img src=".\public\Images\Test-Logo.svg" alt="Image" width="100" height="50" />
                 </Link>
             </div>
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">Navbar</Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/">Home</Link> 
+                            <Link className="nav-link text-white active" aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/contact">Contact</Link> 
+                            <Link className="nav-link text-white" to="/contact">Contact</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-white" to="/contact">Item</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-white" to="/contact">Item</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-white" to="/contact">Item</Link>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
