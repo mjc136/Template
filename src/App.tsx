@@ -1,8 +1,8 @@
 import './App.css'
-import Message from './Components/Message'
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
-    return <div><Message/></div>
+    return <div><Navbar/></div>
 }
 
 export default App
