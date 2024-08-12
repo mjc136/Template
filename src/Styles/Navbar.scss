@@ -1,0 +1,17 @@
+@import "variables";
+
+.navbar {
+    .nav-link {
+        transition: color 0.3s ease;
+        color: #ffffff; // Default link color
+
+        &.active {
+            font-weight: bold; // Optional: Make active link bold
+            border-bottom: 2px solid $white; // Optional: Underline for active link
+        }
+
+        &:hover {
+            color: lighten(#f8f9fa, 10%);
+        }
+    }
+}

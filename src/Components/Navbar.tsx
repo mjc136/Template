@@ -1,31 +1,59 @@
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import '../styles/Navbar.scss'; // Ensure this path is correct
 
-function Navbar() {
+const Navbar: React.FC = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
-            <div className="container"> {/* Logo */}
-                <Link className="navbar-brand" to="/">
-                    <img src=".\public\Images\Test-Logo.svg" alt="Image" width="100" height="50" />
-                </Link>
+            <div className="container">
+                {/* Logo */}
+                <NavLink className="navbar-brand" to="/">
+                    <img src="./Images/Test-Logo.svg" alt="Logo" width="100" height="50" />
+                </NavLink>
             </div>
             <div className="container-fluid">
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav nav-pills">
                         <li className="nav-item">
-                            <Link className="nav-link text-white active" aria-current="page" to="/">Home</Link>
+                            <NavLink
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} text-white`}
+                                to="/"
+                                end
+                            >
+                                Home
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/contact">Contact</Link>
+                            <NavLink
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} text-white`}
+                                to="/contact"
+                            >
+                                Contact
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/contact">Item</Link>
+                            <NavLink
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} text-white`}
+                                to="/item1"
+                            >
+                                Item 1
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/contact">Item</Link>
+                            <NavLink
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} text-white`}
+                                to="/item2"
+                            >
+                                Item 2
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to="/contact">Item</Link>
+                            <NavLink
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''} text-white`}
+                                to="/item3"
+                            >
+                                Item 3
+                            </NavLink>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">

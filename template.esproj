@@ -15,7 +15,6 @@
     <TypeScriptConfiguration Remove="src\Components\NewFolder\**" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="public\Images\" />
     <Folder Include="public\Videos\" />
   </ItemGroup>
 </Project>
