@@ -16,4 +16,16 @@
     background-position: center;
     background-blend-mode: multiply; /* Darkens the image by blending it with the background color */
     background-color: rgba(0, 0, 0, 0.5); /* Add a dark background color for blending */
+    &.h1 {
+        color: $white-color;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 10rem;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 100px;
+    }
 }
