@@ -2,16 +2,18 @@
 
 .navbar {
     .nav-link {
-        transition: color 0.3s ease;
-        color: #ffffff; // Default link color
-
         &.active {
-            font-weight: bold; // Optional: Make active link bold
-            border-bottom: 2px solid $white; // Optional: Underline for active link
-        }
-
-        &:hover {
-            color: lighten(#f8f9fa, 10%);
+            font-weight: bold; // Make active link bold
         }
     }
+}
+
+.nav-img {
+    background-image: url("./Images/bg-image.jpg");
+    height: 60vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; /* Darkens the image by blending it with the background color */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a dark background color for blending */
 }
