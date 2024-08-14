@@ -1,9 +1,38 @@
 import React from 'react';
+import Carousel from '../Components/carousel';
+
+const carouselData = [
+    {
+        id: 1,
+        imgSrc: 'https://picsum.photos/1200/600',
+        title: 'Example headline.',
+        description: 'Some representative placeholder content for the first slide of the carousel.',
+        buttonText: 'Sign up today',
+        buttonLink: '#'
+    },
+    {
+        id: 2,
+        imgSrc: 'https://picsum.photos/1000/1000',
+        title: 'Another example headline.',
+        description: 'Some representative placeholder content for the second slide of the carousel.',
+        buttonText: 'Learn more',
+        buttonLink: '#'
+    },
+    {
+        id: 3,
+        imgSrc: 'https://picsum.photos/1500/1000',
+        title: 'One more for good measure.',
+        description: 'Some representative placeholder content for the third slide of this carousel.',
+        buttonText: 'Browse gallery',
+        buttonLink: '#'
+    }
+];
 
 const Home: React.FC = () => {
     return (
         <>
             <div>
+                <Carousel carouselData={carouselData} />
                 <h2>Home Page</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis, est nec aliquam congue, tellus metus vehicula dui,
                     id vehicula urna nibh at eros. Morbi vel facilisis nisi. Pellentesque elit ante, malesuada eget lobortis id, finibus mollis diam.
