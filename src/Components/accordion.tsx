@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/accordion.scss';
 
 interface AccordionItem {
     id: number;
@@ -15,7 +16,7 @@ interface AccordionProps {
 
 const Accordion: React.FC<AccordionProps> = ({ accordionData }) => {
     return (
-        <div className="accordion" id="accordionExample">
+        <div className="accordion my-2" id="accordionExample">
             {accordionData.map((item, index) => (
                 <div className="accordion-item" key={item.id}>
                     <h2 className="accordion-header">
